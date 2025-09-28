@@ -86,7 +86,7 @@ usethis::use_package("ellmer", "Suggests")
 
 ### 3.3. Automated Startup (.Rprofile Content)
 
-The following code should be placed in your project's `.Rprofile` to ensure `devtools` is loaded and the AI tools are connected automatically, provided the required packages and API key are available in the container.
+The following code should be placed in your project's `.Rprofile` to ensure `devtools` is loaded and the AI tools are connected automatically.
 
 ```R
 # Activate renv
@@ -109,11 +109,5 @@ if (requireNamespace("devtools", quietly = TRUE)) {
   library(devtools) 
 }
 ```
-
-To use the AI-assisted coding features of `{chores}` and `{ellmer}`, you must set your `ANTHROPIC_API_KEY` environment variable on your local system before launching the Dev Container.
-
-The `devcontainer.json` is configured to securely inject this key into the running container without storing it in your GitHub repository.
-
-You must set `ANTHROPIC_API_KEY` as a local environment variable (e.g., in your shell profile or VS Code settings). 
 
 Again, **make sure you add .Renviron to .gitignore.**
