@@ -64,6 +64,7 @@ renv::install("devtools") # Ensure devtools is installed in the renv project
 
 usethis::create_tidy_package(getwd()) # Creates the basic package structure in the current directory
 usethis::use_git() # Initializes Git repository
+gitcreds::gitcreds_set() # Enter your github PAT https://usethis.r-lib.org/articles/git-credentials.html
 usethis::use_github() # Links local repo to a new/existing GitHub repository
 usethis::use_tidy_github() # Sets up Tidyverse-style GitHub configuration
 usethis::use_tidy_github_actions() # Adds GitHub Actions workflows (e.g., R-CMD-check)
