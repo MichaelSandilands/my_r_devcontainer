@@ -29,12 +29,6 @@
     }
   },
 
-  // Securely inject environment variables (PATs) from the local machine into the container.
-  "remoteEnv": {
-      "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
-      "GITHUB_PAT": "${localEnv:GITHUB_PAT}"
-  },
-
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "R -q -e 'renv::install()'",
 
