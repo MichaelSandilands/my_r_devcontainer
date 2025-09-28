@@ -18,9 +18,14 @@ Sign up to [Claude](https://claude.ai/)
 
 Sign up to [Anthropic](https://console.anthropic.com)
 
-### 1.3.
+### 1.3. .Renviron for Storing Credentials
 
-I add the secrets to .Renviron and then ensure .Renviron is added to .gitignore
+I use .Renviron for storing credentials. Make sure .Renviron is added to your .gitignore file.
+
+```R
+ANTHROPIC_API_KEY=sk-ant-...
+GITHUB_PAT=ghp_...
+```
 
 ## 2. Setup and Launch
 
@@ -110,3 +115,5 @@ To use the AI-assisted coding features of `{chores}` and `{ellmer}`, you must se
 The `devcontainer.json` is configured to securely inject this key into the running container without storing it in your GitHub repository.
 
 You must set `ANTHROPIC_API_KEY` as a local environment variable (e.g., in your shell profile or VS Code settings). 
+
+Again, **make sure you add .Renviron to .gitignore.**
