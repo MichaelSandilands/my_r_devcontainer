@@ -85,7 +85,35 @@ usethis::use_package("gander", "Suggests")
 usethis::use_package("ellmer", "Suggests")
 ```
 
-### 3.3. Automated Startup (.Rprofile Content)
+### 3.3. Add Test Coverage (covr)
+
+Create a [Code Coverage](https://about.codecov.io/) account and link it to your Github account. 
+
+In the root of your R package create a `.travis.yml` file and populate it with the following:
+
+```
+language: r
+
+r_packages:
+  - covr
+
+after_success:
+  - Rscript -e 'library(covr); codecov()'
+```
+
+Add `covr` to your project's metadata with this R code:
+
+```R
+usethis::use_package("covr", "Suggests")
+```
+
+Add test coverage to your project with the following R code:
+
+```R
+usethis::use_coverage()
+```
+
+### 3.4. Automated Startup (.Rprofile Content)
 
 The following code should be placed in your project's `.Rprofile` to ensure `devtools` is loaded and the AI tools are connected automatically.
 
