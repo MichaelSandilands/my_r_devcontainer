@@ -85,6 +85,12 @@ usethis::use_package("gander", "Suggests")
 usethis::use_package("ellmer", "Suggests")
 ```
 
+Restart the R session and add shorcuts for the AI tools:
+
+`Tools > Modify Keyboard Shortcuts > Search "Chores"` Set this to `Ctrl+Alt+c`
+
+`Tools > Modify Keyboard Shortcuts > Search "gander"` Set this to `Ctrl+Alt+g`
+
 ### 3.3. Add Test Coverage (covr)
 
 Create a [Code Coverage](https://about.codecov.io/) account and link it to your Github account. 
