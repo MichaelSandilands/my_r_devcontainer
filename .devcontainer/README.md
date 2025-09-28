@@ -20,35 +20,7 @@ Sign up to [Anthropic](https://console.anthropic.com)
 
 ### 1.3.
 
-I like to store my dotfiles on github. So I create a separete file for API keys, ~/.env.local
-
-```Bash
-# ~/.env.local
-
-# AI KEYS
-export OPENAI_API_KEY="sk-..."
-export ANTHROPIC_API_KEY="sk-ant-..."
-
-# GITHUB PAT (for usethis functions)
-export GITHUB_PAT="ghp_..."
-```
-
-I restrict the permissions for this file:
-
-```Bash
-chmod 600 ~/.env.local
-```
-
-Then I add the following to my .bashrc:
-
-```Bash
-# Add this code block to the end of your ~/.zshrc or ~/.bashrc
-
-# Load local environment variables if they exist
-if [ -f "$HOME/.env.local" ]; then
-  source "$HOME/.env.local"
-fi
-```
+I add the secrets to .Renviron and then ensure .Renviron is added to .gitignore
 
 ## 2. Setup and Launch
 
