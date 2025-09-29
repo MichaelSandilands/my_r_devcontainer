@@ -94,18 +94,6 @@ Restart the R session and add shorcuts for the AI tools:
 
 Create a [Code Coverage](https://about.codecov.io/) account and link it to your Github account. 
 
-In the root of your R package create a `.travis.yml` file and populate it with the following:
-
-```
-language: r
-
-r_packages:
-  - covr
-
-after_success:
-  - Rscript -e 'library(covr); codecov()'
-```
-
 Add `covr` to your project's metadata with this R code:
 
 ```R
