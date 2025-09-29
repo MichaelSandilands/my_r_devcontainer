@@ -24,7 +24,6 @@ I use .Renviron for storing credentials. Make sure .Renviron is added to your .g
 
 ```R
 ANTHROPIC_API_KEY=sk-ant-...
-GITHUB_PAT=ghp_...
 ```
 
 ## 2. Setup and Launch
